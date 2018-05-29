@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MultiPeerConnection_AppleTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Xfn-l5-j05">
+                                <rect key="frame" x="90" y="432" width="1740" height="216"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="FvV-HG-UJm">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="216"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esperando jogador" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVt-Xu-3X7">
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="46"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHu-1Z-xAU">
+                                                <rect key="frame" x="0.0" y="130" width="384" height="86"/>
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" title="Enviar mensagem"/>
+                                                <connections>
+                                                    <action selector="sendMessageButtonTapped:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Ug3-Bp-bHO"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="iVt-Xu-3X7" firstAttribute="leading" secondItem="FvV-HG-UJm" secondAttribute="leading" id="NjX-W5-rIp"/>
+                                            <constraint firstAttribute="trailing" secondItem="iVt-Xu-3X7" secondAttribute="trailing" id="y2A-IO-dKB"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="0sf-HQ-AcP">
+                                        <rect key="frame" x="678" y="0.0" width="384" height="216"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esperando jogador" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8S-Rt-daV">
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="46"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJL-Wo-NVb">
+                                                <rect key="frame" x="0.0" y="130" width="384" height="86"/>
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" title="Enviar mensagem"/>
+                                                <connections>
+                                                    <action selector="sendMessageButtonTapped:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="0vC-29-fVa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="y8S-Rt-daV" firstAttribute="leading" secondItem="0sf-HQ-AcP" secondAttribute="leading" id="0hh-02-yIK"/>
+                                            <constraint firstAttribute="trailing" secondItem="y8S-Rt-daV" secondAttribute="trailing" id="4Ge-IL-qcb"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="safeArea" id="BzQ-a2-0R5"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="V5s-J0-8Sa">
+                                        <rect key="frame" x="1356" y="0.0" width="384" height="216"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esperando jogador" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCU-8u-lKE">
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="46"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iex-SH-DVb">
+                                                <rect key="frame" x="0.0" y="130" width="384" height="86"/>
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" title="Enviar mensagem"/>
+                                                <connections>
+                                                    <action selector="sendMessageButtonTapped:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="aus-WE-zUn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="HCU-8u-lKE" firstAttribute="leading" secondItem="V5s-J0-8Sa" secondAttribute="leading" id="GT4-Zr-tdE"/>
+                                            <constraint firstAttribute="trailing" secondItem="HCU-8u-lKE" secondAttribute="trailing" id="Mpw-U7-2Iq"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="safeArea" id="GBn-zj-90c"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esperando mensagem de algum player... " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTI-eW-p0c">
+                                <rect key="frame" x="90" y="848" width="1740" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="asu-SX-224"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xfn-l5-j05" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6m9-ob-X5j"/>
+                            <constraint firstItem="wu6-TO-1qx" firstAttribute="trailing" secondItem="mTI-eW-p0c" secondAttribute="trailing" id="CLl-eV-jzG"/>
+                            <constraint firstItem="Xfn-l5-j05" firstAttribute="leading" secondItem="wu6-TO-1qx" secondAttribute="leading" id="H8M-FL-cW7"/>
+                            <constraint firstItem="Xfn-l5-j05" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ifg-Z0-VXh"/>
+                            <constraint firstItem="Xfn-l5-j05" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="QMY-FL-rQP"/>
+                            <constraint firstItem="wu6-TO-1qx" firstAttribute="trailing" secondItem="Xfn-l5-j05" secondAttribute="trailing" id="eHN-L5-NA2"/>
+                            <constraint firstItem="mTI-eW-p0c" firstAttribute="top" secondItem="Xfn-l5-j05" secondAttribute="bottom" constant="200" id="n6l-aq-DqJ"/>
+                            <constraint firstItem="mTI-eW-p0c" firstAttribute="leading" secondItem="wu6-TO-1qx" secondAttribute="leading" id="qwc-EC-OcN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="mTI-eW-p0c" id="QTh-hQ-s39"/>
+                        <outlet property="player1Label" destination="iVt-Xu-3X7" id="cV0-4I-XeJ"/>
+                        <outlet property="player2Label" destination="y8S-Rt-daV" id="gV1-TF-QYp"/>
+                        <outlet property="player3Label" destination="HCU-8u-lKE" id="bki-Nv-FXz"/>
+                        <outlet property="sendMessageToPlayer1Button" destination="SHu-1Z-xAU" id="FEu-po-Vgj"/>
+                        <outlet property="sendMessageToPlayer2Button" destination="xJL-Wo-NVb" id="ONL-1p-gKd"/>
+                        <outlet property="sendMessageToPlayer3Button" destination="Iex-SH-DVb" id="J9Q-EI-SkS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
